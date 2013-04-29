@@ -21,12 +21,5 @@ describe("queue", function() {
 
   // Organize your tests with nested describe() statements
   // Use '#methodName()' to denote tests that focus on a certain method
-  describe('#add()', function() {
-    it('should take one argument', function() {
-      // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
-      expect(queue.add.length).to.equal(1);
-    });
-  });
 
-  // Hey! Add more tests here to test the functionality of queue
 });
