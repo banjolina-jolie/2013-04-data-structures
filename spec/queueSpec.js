@@ -39,7 +39,15 @@ describe("queue", function() {
       queue.remove();
       expect(queue.size()).to.equal(0);
       });
+
+    it('should return newly removed item' , function() {
+      queue.add('a');
+      expect(queue.remove()).to.equal('a');
+      });
+
     });
+
+
 
   // describe('#size()', function() {
   //   it('should take one argument', function() {

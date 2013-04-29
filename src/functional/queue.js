@@ -15,11 +15,11 @@ var makeQueue = function(){
   };
 
   queue.remove = function(){
-    // var result = storage[index];
+    var result = storage[index];
     delete storage[index];
     index += 1;
     size -= 1;
-    // return result;
+    return result;
 
   };
 
