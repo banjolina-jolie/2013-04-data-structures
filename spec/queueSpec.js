@@ -22,9 +22,11 @@ describe("queue", function() {
   // Organize your tests with nested describe() statements
   // Use '#methodName()' to denote tests that focus on a certain method
   describe('#add()', function() {
-    it('should increase the size by 1', function() {
+    it('passing a single argument at a time should increase the size by 1', function() {
       queue.add('a');
       expect(queue.size()).to.equal(1);
+      queue.add('b');
+      expect(queue.size()).to.equal(2);
     });
   });
 

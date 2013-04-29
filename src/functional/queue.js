@@ -8,14 +8,15 @@ var makeQueue = function(){
   var queue = {};
 
   queue.add = function(value){
-    queue[0] = value;
+    queue[size] = value;
+    size += 1
   };
 
   queue.remove = function(){
   };
 
   queue.size = function(){
-    return Object.keys(queue).length - 3;
+    return size;
   };
 
   return queue;
