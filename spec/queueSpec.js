@@ -36,12 +36,14 @@ describe("queue", function() {
   describe('#remove()', function() {
     it('should remove an item in queue' , function() {
       queue.add('a');
+      queue.add('b');
       queue.remove();
-      expect(queue.size()).to.equal(0);
+      expect(queue.size()).to.equal(1);
       });
 
-    it('should return newly removed item' , function() {
+    it('should return newly removed item from the beginning of queue' , function() {
       queue.add('a');
+      queue.add('b');
       expect(queue.remove()).to.equal('a');
       });
 
