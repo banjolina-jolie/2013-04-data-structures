@@ -26,11 +26,7 @@ describe("queue", function() {
       queue.add('a');
       expect(queue.size()).to.equal(1);
     });
-
-    it('passing multiple arguments should increase size by number of arguments passed', function() {
-      queue.add('b', 'c');
-      expect(queue.size()).to.equal(2);
-    });
+    // did it really add what i told it to?
   });
 
   describe('#remove()', function() {
@@ -39,15 +35,34 @@ describe("queue", function() {
       queue.add('b');
       queue.remove();
       expect(queue.size()).to.equal(1);
-      });
+    });
 
     it('should return newly removed item from the beginning of queue' , function() {
       queue.add('a');
       queue.add('b');
       expect(queue.remove()).to.equal('a');
-      });
-
     });
+
+    it('should return the stuff' , function() {
+      queue.add('a');
+      queue.add('b');
+      expect(queue.remove()).to.equal('a');
+      expect(queue.remove()).to.equal('b');
+    });
+
+
+    it('should do the stuff' , function() {
+      queue.add('a');
+      queue.add('b');
+      expect(queue.remove()).to.equal('a');
+      expect(queue.remove()).to.equal('b');
+      queue.add('c');
+      queue.add('d');
+      expect(queue.remove()).to.equal('c');
+      expect(queue.remove()).to.equal('d');
+    });
+
+  });
 
 
 
