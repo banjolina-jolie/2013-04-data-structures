@@ -7,12 +7,20 @@ var makeQueue = function(){
   // Implement the methods below
   var queue = {};
 
+  var index = 0;
+
   queue.add = function(value){
-    queue[size] = value;
-    size += 1
+    storage[size] = value;
+    size += arguments.length;
   };
 
   queue.remove = function(){
+    // var result = storage[index];
+    delete storage[index];
+    index += 1;
+    size -= 1;
+    // return result;
+
   };
 
   queue.size = function(){

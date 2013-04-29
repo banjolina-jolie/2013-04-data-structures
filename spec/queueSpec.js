@@ -25,17 +25,21 @@ describe("queue", function() {
     it('passing a single argument at a time should increase the size by 1', function() {
       queue.add('a');
       expect(queue.size()).to.equal(1);
-      queue.add('b');
+    });
+
+    it('passing multiple arguments should increase size by number of arguments passed', function() {
+      queue.add('b', 'c');
       expect(queue.size()).to.equal(2);
     });
   });
 
-  // describe('#remove()', function() {
-  //   it('should take one argument', function() {
-  //     // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
-  //     expect(queue.add.length).to.equal(1);
-    //   });
-    // });
+  describe('#remove()', function() {
+    it('should remove an item in queue' , function() {
+      queue.add('a');
+      queue.remove();
+      expect(queue.size()).to.equal(0);
+      });
+    });
 
   // describe('#size()', function() {
   //   it('should take one argument', function() {
