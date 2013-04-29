@@ -22,11 +22,30 @@ describe("stack", function() {
   // Organize your tests with nested describe() statements
   // Use '#methodName()' to denote tests that focus on a certain method
   describe('#add()', function() {
-    it('should take one argument', function() {
-      // Make sure add() takes a single argument using (see http://mdn.io/Function.length)
-      expect(stack.add.length).to.equal(1);
+    it('passing a single argument at a time should increase the size by 1', function() {
+      stack.add('a');
+      expect(stack.size()).to.equal(1);
+    });
+
+    it('passing multiple arguments should increase size by number of arguments passed', function() {
+      stack.add('b', 'c');
+      expect(stack.size()).to.equal(2);
     });
   });
 
-  // Hey! Add more tests here to test the functionality of stack
+  describe('#remove()', function() {
+    it('should remove an item in stack' , function() {
+      stack.add('a');
+      stack.add('b');
+      stack.remove();
+      expect(stack.size()).to.equal(1);
+      });
+
+    it('should return newly removed item from the end of stack' , function() {
+      stack.add('a');
+      stack.add('b');
+      expect(stack.remove()).to.equal('b');
+      });
+    });
+
 });
