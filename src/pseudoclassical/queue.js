@@ -1,9 +1,8 @@
 var Queue = function(){
-  var queue = Object.create(Queue.prototype);
-  queue.storage = {};
-  queue.leng = 0;
-  queue.counter = 0;
-  return queue;
+
+  this.storage = {};
+  this.leng = 0;
+  this.counter = 0;
 };
 
   Queue.prototype.add = function(value){
@@ -23,3 +22,5 @@ var Queue = function(){
   Queue.prototype.size = function(){
     return this.leng;
   };
+
+  var queue = new Queue();
