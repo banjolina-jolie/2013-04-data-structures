@@ -24,8 +24,6 @@ makeStack.stackMethods = {};
     return this.leng;
   };
 
-
-
 var extend = function(to, from){
   for (var key in from){
     to[key] = from[key];

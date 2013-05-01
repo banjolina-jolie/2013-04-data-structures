@@ -6,20 +6,19 @@ var Queue = function(){
   return queue;
 };
 
-  Queue.prototype.add = function(value){
-    this.storage[this.counter] = value;
-    this.counter += 1;
-    this.leng += 1;
-  };
+Queue.prototype.add = function(value){
+  this.storage[this.counter] = value;
+  this.counter += 1;
+  this.leng += 1;
+};
 
-  Queue.prototype.remove = function(){
-    var result = this.storage[this.counter-this.leng];
-    delete this.storage[this.counter-this.leng];
-    this.leng -= 1;
-    return result;
+Queue.prototype.remove = function(){
+  var result = this.storage[this.counter-this.leng];
+  delete this.storage[this.counter-this.leng];
+  this.leng -= 1;
+  return result;
+};
 
-  };
-
-  Queue.prototype.size = function(){
-    return this.leng;
-  };
+Queue.prototype.size = function(){
+  return this.leng;
+};

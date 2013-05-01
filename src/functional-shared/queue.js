@@ -20,7 +20,6 @@ var makeQueue = function(){
     delete this.storage[this.counter-this.leng];
     this.leng -= 1;
     return result;
-
   };
 
   makeQueue.queueMethods.size = function(){

@@ -1,10 +1,6 @@
 var makeQueue = function(){
-  // Use an object with numeric keys to store values
   var storage = {};
-
-  var size = 0; // Hint: set an initial value here
-
-  // Implement the methods below
+  var size = 0;
   var queue = {};
   var index = 0;
 
@@ -19,7 +15,6 @@ var makeQueue = function(){
     delete storage[index-size];
     size -= 1;
     return result;
-
   };
 
   queue.size = function(){
